@@ -5,16 +5,14 @@ import { MainTemplate } from '../../templates/MainTemplate';
 
 export function Home() {
    return (
-      <>
-         <MainTemplate>
-            <Container>
-               <CountDown />
-            </Container>
+      <MainTemplate>
+         <Container>
+            <CountDown />
+         </Container>
 
-            <Container>
-               <MainForm />
-            </Container>
-         </MainTemplate>
-      </>
+         <Container>
+            <MainForm />
+         </Container>
+      </MainTemplate>
    );
 }
