@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+# 🍅 Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto simples de um **temporizador Pomodoro**, feito com o objetivo de praticar e consolidar conhecimentos no framework React. O foco principal é permitir que o usuário inicie e finalize ciclos de Pomodoro de forma intuitiva.
 
-Currently, two official plugins are available:
+## 🚧 Status do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Em desenvolvimento**  
+Este projeto ainda está em construção e pode conter funcionalidades incompletas ou em fase de testes. A ideia é expandi-lo aos poucos, adicionando melhorias e novos recursos conforme o aprendizado evolui.
 
-## Expanding the ESLint configuration
+## 🎯 Objetivo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O objetivo principal deste projeto é aplicar conceitos de:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-  React
+-  Gerenciamento de estado
+-  Boas práticas de organização e componentes
+-  Estilização com CSS
+-  Experiência do usuário (UX)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🧠 O que é o método Pomodoro?
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+O método Pomodoro é uma técnica de produtividade que consiste em dividir o tempo em blocos focados de 25 minutos de trabalho (chamados de "pomodoros") seguidos por pequenos intervalos. A cada 4 ciclos, uma pausa maior é realizada.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔧 Funcionalidades atuais
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-  Layout responsivo
+-  Mudança de tema + localStorage
+-  🕸️
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📌 Próximos passos
+
+-  Contagem regressiva em tempo real
+-  Configuração personalizada do tempo dos ciclos e pausas
+-  Histórico de ciclos concluídos
+-  Notificações sonoras e visuais
+-  Salvamento de dados no localStorage
+-  Indicação visual do andamento
+
+## 📚 Projeto para fins de estudo
+
+Este projeto não tem fins comerciais e foi criado com o intuito de praticar habilidades de desenvolvimento em React e Typescript.
+
+---
+
+![Imagem 1](https://i.imgur.com/R71ADnA.png)
+
+![Imagem 1](https://i.imgur.com/NY1nA5t.png)
