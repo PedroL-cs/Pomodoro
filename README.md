@@ -25,16 +25,14 @@ O método Pomodoro é uma técnica de produtividade que consiste em dividir o te
 
 -  Layout responsivo
 -  Mudança de tema + localStorage
--  🕸️
+-  Contagem regressiva em tempo real
+-  Notificações sonoras e visuais
 
 ## 📌 Próximos passos
 
--  Contagem regressiva em tempo real
 -  Configuração personalizada do tempo dos ciclos e pausas
 -  Histórico de ciclos concluídos
--  Notificações sonoras e visuais
 -  Salvamento de dados no localStorage
--  Indicação visual do andamento
 
 ## 📚 Projeto para fins de estudo
 
