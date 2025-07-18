@@ -5,8 +5,16 @@ import { Heading } from '../../components/Heading';
 import { MainTemplate } from '../../templates/MainTemplate';
 
 import styles from './styles.module.css';
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
+import { formatDate } from '../../utils/formatDate';
+import { getTaskStatus } from '../../utils/getTaskStatus';
 
 export function Historico() {
+   const { state } = useTaskContext();
+   const sortedTasks = [...state.tasks].sort((a, b) => {
+      return b.startDate - a.startDate;
+   });
+
    return (
       <MainTemplate>
          <Container>
@@ -36,14 +44,20 @@ export function Historico() {
                      </tr>
                   </thead>
                   <tbody>
-                     {Array.from({ length: 10 }).map(() => {
+                     {sortedTasks.map(task => {
+                        const taskTypeDict = {
+                           workTime: 'Foco',
+                           shortBreakTime: 'Descanso curto',
+                           longBreakTime: 'Descanso longo',
+                        };
+
                         return (
-                           <tr>
-                              <td>Estudar</td>
-                              <td>25min</td>
-                              <td>18/07/2025 16:00</td>
-                              <td>Completa</td>
-                              <td>Foco</td>
+                           <tr key={task.id}>
+                              <td>{task.name}</td>
+                              <td>{task.duration}min</td>
+                              <td>{formatDate(task.startDate)}</td>
+                              <td>{getTaskStatus(task, state.activeTask)}</td>
+                              <td>{taskTypeDict[task.type]}</td>
                            </tr>
                         );
                      })}
