@@ -38,9 +38,10 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
 
    useEffect(() => {
       if (!state.activeTask) {
-         // console.log('Worker terminado por falta de task ativa!');
          worker.terminate();
       }
+
+      document.title = `${state.formattedSecondsRemaining} - Pomodoro`;
 
       worker.postMessage(state);
    }, [worker, state]);
