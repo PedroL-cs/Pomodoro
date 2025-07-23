@@ -53,6 +53,10 @@ export function Historico() {
       });
    }
 
+   useEffect(() => {
+      document.title = 'Histórico';
+   }, []);
+
    function handleResetHistory() {
       if (!confirm('Tem certeza que deseja excluir seu histórico de ciclos?'))
          return;
