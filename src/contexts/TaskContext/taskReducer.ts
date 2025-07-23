@@ -56,6 +56,8 @@ export function taskReducer(state: TaskStateModel, action: TaskActionModel) {
                return task;
             }),
          };
+      case TaskActionTypes.CHANGE_SETTINGS:
+         return { ...state, config: { ...action.payload } };
    }
 
    return state;
