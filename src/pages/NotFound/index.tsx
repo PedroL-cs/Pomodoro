@@ -21,7 +21,7 @@ export function NotFound() {
                <p>
                   Mas calma, você não está perdido no espaço (ainda). Dá pra
                   voltar em segurança para a <a href='/'>página principal</a> ou{' '}
-                  <a href='/history'>para o histórico</a>.
+                  <a href='/historico'>para o histórico</a>.
                </p>
             </GenericHtml>
          </Container>
